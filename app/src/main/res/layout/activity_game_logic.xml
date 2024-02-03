@@ -1,0 +1,91 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".GameMainMenu">
+
+    <RelativeLayout
+        android:id="@+id/dogImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp">
+
+        <ImageView
+            android:id="@+id/currentImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/dog"
+            android:scaleType="fitCenter"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/currentText"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dog"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:layout_alignParentEnd="true"
+            tools:ignore="DuplicateIds" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lionImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:id="@+id/currentImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/lion"
+            android:scaleType="fitCenter"
+            android:layout_alignParentStart="true"
+            tools:ignore="DuplicateIds" />
+
+        <TextView
+            android:id="@+id/currentText"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lion"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:layout_alignParentEnd="true"
+            tools:ignore="DuplicateIds" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/snakeImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:id="@+id/currentImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/snake"
+            android:scaleType="fitCenter"
+            android:layout_alignParentStart="true"
+            tools:ignore="DuplicateIds" />
+
+        <TextView
+            android:id="@+id/currentText"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Snake"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:layout_alignParentEnd="true"
+            tools:ignore="DuplicateIds" />
+    </RelativeLayout>
+
+</LinearLayout>
