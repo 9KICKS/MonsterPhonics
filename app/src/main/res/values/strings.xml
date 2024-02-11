@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MonsterPhonics</string>
+    <string name="exit_game">Exit Game</string>
+    <string name="play_game">Play Game</string>
+    <string name="settings">Settings</string>
+    <string name="monster_phonics">Monster Phonics</string>
 </resources>
