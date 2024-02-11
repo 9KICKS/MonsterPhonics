@@ -39,12 +39,13 @@
         />
 
     <Button
-        android:id="@+id/btnSettings"
+        android:id="@+id/btnSound"
         android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/button"
-        android:text="@string/settings"
+        android:text="@string/sound"
+        android:onClick="playIt"
         android:textColor="@color/white"
         android:textStyle="bold"
         android:textSize="30sp"
