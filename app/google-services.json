@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "432483774467",
+    "project_id": "monsterphonics-ba88e",
+    "storage_bucket": "monsterphonics-ba88e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432483774467:android:32c08ee00b36c390a9de36",
+        "android_client_info": {
+          "package_name": "com.example.monsterphonics"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAskwLmUjYks3o7KjSxAFCWESdd7_MppGk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
