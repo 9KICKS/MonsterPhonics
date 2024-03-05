@@ -11,6 +11,7 @@ public class GameLogic extends AppCompatActivity {
 
     private ImageView currentImage;
     private TextView currentText;
+    private MatchingView matchingView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +20,7 @@ public class GameLogic extends AppCompatActivity {
 
         currentImage = findViewById(R.id.currentImage);
         currentText = findViewById(R.id.currentText);
+        matchingView = findViewById(R.id.matchingView);
 
         setCurrentItem(R.drawable.dog, "Dog");
     }
