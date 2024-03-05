@@ -24,6 +24,8 @@ public class GameMainMenu extends AppCompatActivity {
 
     FirebaseFirestore firestore;
 
+    WritingView writingView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,20 +33,9 @@ public class GameMainMenu extends AppCompatActivity {
 
         firestore = FirebaseFirestore.getInstance();
 
-        Map<String, Object> user = new HashMap<>();
-        user.put("username", "9KICKS");
-
-        firestore.collection("users").add(user).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-            @Override
-            public void onSuccess(DocumentReference documentReference) {
-                Toast.makeText(getApplicationContext(), "Success",Toast.LENGTH_LONG).show();
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(getApplicationContext(), "Failed",Toast.LENGTH_LONG).show();
-            }
-        });
+        saveImageAndText("Dog", R.drawable.dog);
+        saveImageAndText("Lion", R.drawable.lion);
+        saveImageAndText("Snake", R.drawable.snake);
 
         btnSound = findViewById(R.id.btnSound);
         final MediaPlayer mediaPlayer = MediaPlayer.create(this,R.raw.audio);
@@ -74,6 +65,26 @@ public class GameMainMenu extends AppCompatActivity {
                 exitGame();
             }
         });
+    }
+
+    private void saveImageAndText(String animal, int imageResourceId) {
+        Map<String, Object> data = new HashMap<>();
+        data.put("text", animal);
+
+        firestore.collection("images")
+                .add(data)
+                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                    @Override
+                    public void onSuccess(DocumentReference documentReference) {
+                        Toast.makeText(GameMainMenu.this, "Data saved for " + animal, Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(GameMainMenu.this, "Failed to save data for " + animal, Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 
     private void exitGame() { finish(); }
