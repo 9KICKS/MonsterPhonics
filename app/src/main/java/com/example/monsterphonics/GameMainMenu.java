@@ -24,8 +24,6 @@ public class GameMainMenu extends AppCompatActivity {
 
     FirebaseFirestore firestore;
 
-    WritingView writingView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
